@@ -1,0 +1,15 @@
+{
+  "name": "@ssia/ddb",
+  "version": "1.0.0",
+  "description": "Dynamo DB client ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Neil Monzales",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1301.0",
+    "electrodb": "^2.4.1"
+  }
+}
