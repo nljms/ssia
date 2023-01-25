@@ -1,0 +1,11 @@
+{
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "prettier.requireConfig": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.tslint": true,
+    "source.organizeImports": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tabSize": 2,
+}
