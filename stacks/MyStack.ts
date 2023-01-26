@@ -6,7 +6,7 @@ export function MyStack({ stack }: StackContext) {
     routes: {
       'GET    /teams': 'functions/list.team',
       'POST   /teams': 'functions/create.team',
-      'PUT    /teams/{playerId}': 'functions/update.player',
+      'PUT    /teams/{teamId}': 'functions/update.team',
       'GET    /players': 'functions/create.player',
       'POST   /players': 'functions/create.player',
       'PUT    /players/{playerId}': 'functions/update.player',
