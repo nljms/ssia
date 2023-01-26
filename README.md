@@ -1,45 +1,50 @@
-# How to create a CRUD API with serverless using DynamoDB
+![ServerlessStack](https://res.cloudinary.com/practicaldev/image/fetch/s--yIpLwIuB--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/iryz7lvob2dpqkfih8o0.png)
 
-An example serverless app created with SST.
+# SSiA (Serverless Stack in Action)
 
-## Getting Started
+A demo application for a CRUD application using [serverless stack](https://sst.dev/), and [electrodb](https://www.npmjs.com/package/electrodb).
 
-[**Read the tutorial**](https://sst.dev/examples/how-to-create-a-crud-api-with-serverless-using-dynamodb.html)
+# Project structure
 
-Install the example.
+I introduced a new package, which is inside the `packages` folder, wherein the dynamo and electrodb configuration is abstracted away to the services.
 
 ```bash
-$ npx create-sst@latest --template=examples/crud-api-dynamodb
-# Or with Yarn
-$ yarn create sst --template=examples/crud-api-dynamodb
+├── README.md
+├── package.json
+├── packages # directory of packages that can be added along in the future
+│ └── database
+│ ├── common
+│ │ ├── clients.ts
+│ │ ├── constants.ts
+│ │ ├── index.ts
+│ │ └── interfaces.ts
+│ ├── index.ts
+│ ├── package.json # package name defined (@sstia/ddb)
+│ ├── schemas
+│ │ ├── index.ts
+│ │ ├── players.ts
+│ │ └── teams.ts
+│ └── storages
+│ ├── PlayerStorage.ts
+│ ├── TeamStorage.ts
+│ └── index.ts
+├── services
+│ ├── functions
+│ │ ├── create.ts
+│ │ ├── get.ts
+│ │ ├── list.ts
+│ │ └── update.ts
+│ ├── package.json
+│ ├── test
+│ │ └── sample.test.ts
+│ └── tsconfig.json
+├── sst.json
+├── stacks
+│ ├── MyStack.ts
+│ └── index.ts
+├── tsconfig.json
+├── vitest.config.ts
+└── yarn.lock
 ```
 
-## Commands
-
-### `npm run start`
-
-Starts the Live Lambda Development environment.
-
-### `npm run build`
-
-Build your app and synthesize your stacks.
-
-### `npm run deploy [stack]`
-
-Deploy all your stacks to AWS. Or optionally deploy, a specific stack.
-
-### `npm run remove [stack]`
-
-Remove all your stacks and all of their resources from AWS. Or optionally removes, a specific stack.
-
-### `npm run test`
-
-Runs your tests using Jest. Takes all the [Jest CLI options](https://jestjs.io/docs/en/cli).
-
-## Documentation
-
-Learn more about the SST.
-
-- [Docs](https://docs.sst.dev/)
-- [@serverless-stack/cli](https://docs.sst.dev/packages/cli)
-- [@serverless-stack/resources](https://docs.sst.dev/packages/resources)
+> If you wanted to learn more about creating or transitioning into monorepo, you can read about [Yarn workspaces](https://classic.yarnpkg.com/lang/en/docs/workspaces/)
