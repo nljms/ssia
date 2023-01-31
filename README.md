@@ -1,6 +1,6 @@
 ![ServerlessStack](https://res.cloudinary.com/practicaldev/image/fetch/s--yIpLwIuB--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/iryz7lvob2dpqkfih8o0.png)
 
-# SSiA (Serverless Stack in Action)
+# SSiA (Serverless Stack in Action) ![ssia](https://view-count.nljms.dev/ssia)
 
 A demo application for a CRUD application using [serverless stack](https://sst.dev/), and [electrodb](https://www.npmjs.com/package/electrodb).
 
